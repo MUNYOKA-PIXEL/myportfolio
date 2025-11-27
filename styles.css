@@ -1,0 +1,65 @@
+/* styles.css
+   This file holds custom styles that work *with* Tailwind CSS.
+   Tailwind handles most of the styling, but this file is for
+   small, specific rules, especially for showing/hiding sections.
+*/
+
+/* This is the core logic for the "Single-Page App" feel.
+  By default, all content sections are hidden.
+*/
+.section {
+  display: none;
+}
+
+/* When a section has the 'active' class (added by JavaScript),
+  this rule overrides the one above and makes it visible.
+*/
+.section.active {
+  display: block;
+}
+
+/* This styles the "active" navigation link (e.g., 'Home', 'About').
+  When the JavaScript adds the 'active' class to a nav link,
+  it will turn indigo and become bold.
+*/
+.nav-link.active {
+  color: #4f46e5; /* This hex code is Tailwind's 'indigo-600' */
+  font-weight: 600; /* This is Tailwind's 'font-semibold' */
+}
+
+/* This sets the default style for the project filter buttons.
+  - 'background-color' matches Tailwind's 'gray-200'
+*/
+.filter-btn {
+  background-color: #e5e7eb; /* gray-200 */
+  color: black;
+}
+
+/* This styles the *selected* filter button.
+  When JavaScript adds the 'active' class, the button
+  gets a darker background and white text.
+  - 'background-color' matches Tailwind's 'gray-400'
+*/
+.filter-btn.active {
+  background-color: #9ca3af; /* gray-400 */
+  color: white;
+}
+
+/* --- Accessibility Helper ---
+  This section adds a soft, visible "outline" when you
+  use the 'Tab' key to navigate the website. This is
+  very helpful for users who can't use a mouse.
+  
+  Tailwind's 'focus:ring-...' classes do this, but
+  this is a good "catch-all" for elements that
+  might have missed it.
+*/
+.nav-link:focus,
+.filter-btn:focus,
+button:focus,
+input:focus,
+textarea:focus {
+  /* A soft, blue-ish glow */
+  outline: 3px solid rgba(99,102,241,0.15);
+  outline-offset: 2px;
+}
