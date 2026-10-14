@@ -54,12 +54,24 @@
   this is a good "catch-all" for elements that
   might have missed it.
 */
-.nav-link:focus,
-.filter-btn:focus,
-button:focus,
-input:focus,
-textarea:focus {
-  /* A soft, blue-ish glow */
-  outline: 3px solid rgba(99,102,241,0.15);
-  outline-offset: 2px;
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid #4f46e5;
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto !important;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }

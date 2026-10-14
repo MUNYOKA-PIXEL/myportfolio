@@ -50,9 +50,15 @@ document.addEventListener('DOMContentLoaded', () => {
             if (link.dataset.target === targetId) {
                 // ...add the 'active' class (to make it look "selected," e.g., underline or bold)
                 link.classList.add('active');
+                if (link.closest('.primary-nav')) {
+                    link.setAttribute('aria-current', 'page');
+                }
             } else {
                 // ...otherwise, remove the 'active' class.
                 link.classList.remove('active');
+                if (link.closest('.primary-nav')) {
+                    link.removeAttribute('aria-current');
+                }
             }
         });
         
@@ -82,18 +88,26 @@ document.addEventListener('DOMContentLoaded', () => {
     // Get all the project cards
     const projectCards = document.querySelectorAll('#projects .project-card');
 
+    // Announce the number of visible projects to assistive technology.
+    const projectResults = document.getElementById('project-results');
+
     // Add a "click" listener to every filter button
     filterButtons.forEach(button => {
         button.addEventListener('click', () => {
             // Get the category to filter by from the button's 'data-category' attribute
             const filterCategory = button.dataset.category;
 
-            // First, remove the 'active' class from all filter buttons
-            filterButtons.forEach(btn => btn.classList.remove('active'));
+            // First, remove the active state from all filter buttons.
+            filterButtons.forEach(btn => {
+                btn.classList.remove('active');
+                btn.setAttribute('aria-pressed', 'false');
+            });
             // Then, add the 'active' class to the specific button that was just clicked
             button.classList.add('active');
+            button.setAttribute('aria-pressed', 'true');
 
             // Loop through all the project cards to decide whether to show or hide them
+            let visibleCount = 0;
             projectCards.forEach(card => {
                 // Get the card's own category from its 'data-category' attribute
                 const cardCategory = card.dataset.category;
@@ -101,10 +115,16 @@ document.addEventListener('DOMContentLoaded', () => {
                 // Show the card if the filter is "all" OR if the card's category matches the filter
                 if (filterCategory === 'all' || filterCategory === cardCategory) {
                     card.style.display = 'block'; // Show the card
+                    visibleCount += 1;
                 } else {
                     card.style.display = 'none'; // Hide the card
                 }
             });
+
+            if (projectResults) {
+                const noun = visibleCount === 1 ? 'project' : 'projects';
+                projectResults.textContent = `Showing ${visibleCount} ${noun}.`;
+            }
         });
     });
 
