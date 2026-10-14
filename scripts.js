@@ -57,8 +57,16 @@ document.addEventListener('DOMContentLoaded', () => {
      * This function handles switching the "active" section.
      * @param {string} targetId - The ID of the section to show (e.g., "home", "about").
      */
-    function navigateTo(targetId) {
-        
+    function navigateTo(targetId, updateUrl = false) {
+        const targetSection = document.getElementById(targetId);
+        if (!targetSection || !targetSection.classList.contains('section')) {
+            return;
+        }
+
+        if (updateUrl && window.location.hash !== `#${targetId}`) {
+            window.history.pushState(null, '', `#${targetId}`);
+        }
+
         // Loop through all sections
         sections.forEach(section => {
             // If this section's ID matches the one we want to show...
@@ -103,9 +111,19 @@ document.addEventListener('DOMContentLoaded', () => {
             const targetId = link.dataset.target;
             
             // Call our function to show the correct section
-            navigateTo(targetId);
+            navigateTo(targetId, true);
         });
     });
+
+    function navigateFromUrl() {
+        const targetId = window.location.hash.slice(1);
+        const targetSection = Array.from(sections).find(section => section.id === targetId);
+        navigateTo(targetSection ? targetSection.id : 'home');
+    }
+
+    window.addEventListener('popstate', navigateFromUrl);
+    window.addEventListener('hashchange', navigateFromUrl);
+    navigateFromUrl();
 
     // --- 3. PROJECT FILTERING LOGIC ---
 
