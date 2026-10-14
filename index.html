@@ -145,63 +145,93 @@
           categories of my work.
         </p>
 
-        <div role="group" aria-label="Filter projects by category" class="flex justify-center gap-2 sm:gap-4 my-8">
+        <div role="group" aria-label="Filter projects by category" class="flex flex-wrap justify-center gap-2 sm:gap-4 my-8">
           <button type="button" class="filter-btn active font-semibold px-4 py-2 rounded-full transition-all" data-category="all" aria-pressed="true" aria-controls="project-grid">All</button>
           <button type="button" class="filter-btn font-semibold px-4 py-2 rounded-full transition-all" data-category="web" aria-pressed="false" aria-controls="project-grid">Web Development</button>
           <button type="button" class="filter-btn font-semibold px-4 py-2 rounded-full transition-all" data-category="design" aria-pressed="false" aria-controls="project-grid">Design</button>
           <button type="button" class="filter-btn font-semibold px-4 py-2 rounded-full transition-all" data-category="other" aria-pressed="false" aria-controls="project-grid">Other</button>
         </div>
 
-        <p id="project-results" class="sr-only" role="status" aria-live="polite" aria-atomic="true">Showing 4 projects.</p>
+        <p id="project-results" class="sr-only" role="status" aria-live="polite" aria-atomic="true">Showing 5 projects.</p>
         <div id="project-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          
-          <div class="project-card bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-300" data-category="other">
-            <div class="h-48 bg-stone-800 flex items-center justify-center text-stone-400 font-mono text-sm border-b-4 border-indigo-500">
-              &gt;_ payroll_main.py
+          <article class="project-card bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-300" data-category="web">
+            <div class="h-48 bg-indigo-100 flex items-center justify-center text-indigo-700 font-bold text-lg border-b-4 border-indigo-500">
+              OmniCampus
             </div>
             <div class="p-6">
-              <h3 class="text-xl font-semibold text-slate-900">Payroll Automation System</h3>
+              <h3 class="text-xl font-semibold text-slate-900">OmniCampus</h3>
               <p class="text-slate-600 mt-2">
-                Automates salary processing and tax calculations using <strong>Python</strong>, generating detailed text-based financial reports.
+                A campus platform bringing together student services such as library borrowing, clubs, medical services, and lost and found.
               </p>
+              <p class="text-sm text-slate-500 mt-3"><strong>Built with:</strong> React, TypeScript, Supabase</p>
+              <div class="flex flex-wrap gap-4 mt-4">
+                <a href="https://omnicampus-campus.vercel.app" target="_blank" rel="noopener noreferrer" class="font-semibold text-indigo-600 hover:text-indigo-800 underline underline-offset-4">Live demo</a>
+                <a href="https://github.com/MUNYOKA-PIXEL/Omnicampus_Project" target="_blank" rel="noopener noreferrer" class="font-semibold text-indigo-600 hover:text-indigo-800 underline underline-offset-4">Source code</a>
+              </div>
             </div>
-          </div>
+          </article>
 
-          <div class="project-card bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-300" data-category="other">
-            <div class="h-48 bg-stone-800 flex items-center justify-center text-stone-400 font-mono text-sm border-b-4 border-indigo-500">
-              &gt;_ hex_converter.py
+          <article class="project-card bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-300" data-category="other">
+            <div class="h-48 bg-emerald-100 flex items-center justify-center text-emerald-800 font-bold text-lg border-b-4 border-emerald-500">
+              Veterinary Decision Support
             </div>
             <div class="p-6">
-              <h3 class="text-xl font-semibold text-slate-900">Number Base Converter</h3>
+              <h3 class="text-xl font-semibold text-slate-900">Veterinary Clinical Decision Support System</h3>
               <p class="text-slate-600 mt-2">
-                Converts decimal integers to hexadecimal format using custom <strong>Python</strong> algorithms and error handling.
+                An interactive machine-learning application that estimates disease predictions for cattle, sheep, and goats from clinical symptoms and vital signs.
               </p>
+              <p class="text-sm text-slate-500 mt-3"><strong>Built with:</strong> Python, Streamlit, scikit-learn</p>
+              <div class="flex flex-wrap gap-4 mt-4">
+                <a href="https://github.com/MUNYOKA-PIXEL/VCDSS-AI" target="_blank" rel="noopener noreferrer" class="font-semibold text-indigo-600 hover:text-indigo-800 underline underline-offset-4">Source code</a>
+              </div>
             </div>
-          </div>
+          </article>
 
-          <div class="project-card bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-300" data-category="other">
-            <div class="h-48 bg-stone-800 flex items-center justify-center text-stone-400 font-mono text-sm border-b-4 border-indigo-500">
-              &gt;_ algorithms.py
+          <article class="project-card bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-300" data-category="other">
+            <div class="h-48 bg-amber-100 flex items-center justify-center text-amber-800 font-mono text-sm border-b-4 border-amber-500">
+              &gt;_ payroll report
             </div>
             <div class="p-6">
-              <h3 class="text-xl font-semibold text-slate-900">Math & Logic Utilities</h3>
+              <h3 class="text-xl font-semibold text-slate-900">Payroll System Calculation</h3>
               <p class="text-slate-600 mt-2">
-                A suite of <strong>Python</strong> functions implementing financial compound interest and recursive algorithms like Fibonacci.
+                A Python command-line program that calculates payroll deductions and net salary, then generates a detailed report.
               </p>
+              <p class="text-sm text-slate-500 mt-3"><strong>Built with:</strong> Python</p>
+              <div class="flex flex-wrap gap-4 mt-4">
+                <a href="https://github.com/MUNYOKA-PIXEL/Payroll-System-Calculation" target="_blank" rel="noopener noreferrer" class="font-semibold text-indigo-600 hover:text-indigo-800 underline underline-offset-4">Source code</a>
+              </div>
             </div>
-          </div>
+          </article>
 
-          <div class="project-card bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-300" data-category="web">
-            <div class="h-48 bg-indigo-100 flex items-center justify-center text-indigo-600 font-bold text-lg border-b-4 border-indigo-500">
-              www.munyoka.dev
+          <article class="project-card bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-300" data-category="web">
+            <div class="h-48 bg-sky-100 flex items-center justify-center text-sky-700 font-bold text-lg border-b-4 border-indigo-500">
+              Peter Munyoka Ilunga
             </div>
             <div class="p-6">
-              <h3 class="text-xl font-semibold text-slate-900">Digital Portfolio SPA</h3>
+              <h3 class="text-xl font-semibold text-slate-900">Personal Portfolio</h3>
               <p class="text-slate-600 mt-2">
-                A responsive Single-Page Application (SPA) built with <strong>HTML5</strong>, <strong>Tailwind CSS</strong>, and <strong>JavaScript</strong> for seamless navigation.
+                A responsive portfolio website presenting my background, projects, and contact information.
               </p>
+              <p class="text-sm text-slate-500 mt-3"><strong>Built with:</strong> HTML, Tailwind CSS, JavaScript</p>
+              <div class="flex flex-wrap gap-4 mt-4">
+                <a href="https://munyoka-pixel.github.io/myportfolio" target="_blank" rel="noopener noreferrer" class="font-semibold text-indigo-600 hover:text-indigo-800 underline underline-offset-4">Live site</a>
+                <a href="https://github.com/MUNYOKA-PIXEL/myportfolio" target="_blank" rel="noopener noreferrer" class="font-semibold text-indigo-600 hover:text-indigo-800 underline underline-offset-4">Source code</a>
+              </div>
             </div>
-          </div>
+          </article>
+
+          <article class="project-card bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-300" data-category="design">
+            <div class="h-48 bg-rose-100 flex items-center justify-center text-rose-700 font-bold text-lg border-b-4 border-rose-500">
+              Fashion Design
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold text-slate-900">Fashion Business Website</h3>
+              <p class="text-slate-600 mt-2">
+                A website for my fashion design business. A portfolio preview is coming soon.
+              </p>
+              <p class="text-sm text-slate-500 mt-3"><strong>Status:</strong> Coming soon</p>
+            </div>
+          </article>
 
         </div>
       </div>
