@@ -24,6 +24,33 @@ document.addEventListener('DOMContentLoaded', () => {
     // Get the "Send Message" button
     const submitButton = document.getElementById('submit-button');
 
+    // Set up the light/dark color theme toggle.
+    const themeToggle = document.getElementById('theme-toggle');
+    if (themeToggle) {
+        const updateTheme = (isDark, persist = false) => {
+            document.documentElement.classList.toggle('dark-mode', isDark);
+            themeToggle.setAttribute('aria-pressed', String(isDark));
+
+            const label = isDark ? 'Switch to light mode' : 'Switch to dark mode';
+            themeToggle.setAttribute('aria-label', label);
+            themeToggle.title = label;
+
+            if (persist) {
+                try {
+                    localStorage.setItem('portfolio-theme', isDark ? 'dark' : 'light');
+                } catch (error) {
+                    console.error('Unable to save the selected color theme:', error);
+                }
+            }
+        };
+
+        updateTheme(document.documentElement.classList.contains('dark-mode'));
+        themeToggle.addEventListener('click', () => {
+            const isDark = !document.documentElement.classList.contains('dark-mode');
+            updateTheme(isDark, true);
+        });
+    }
+
     // --- 2. NAVIGATION LOGIC (Showing/Hiding Sections) ---
 
     /**

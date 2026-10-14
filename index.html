@@ -5,6 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Explore the portfolio of Peter Munyoka Ilunga, a Software Engineering student showcasing web projects, programming work, and his journey in technology.">
   <title>Peter Munyoka Ilunga - Digital Portfolio</title>
+  <script>
+    try {
+      if (localStorage.getItem('portfolio-theme') === 'dark') {
+        document.documentElement.classList.add('dark-mode');
+      }
+    } catch (error) {
+      console.error('Unable to restore the saved color theme:', error);
+    }
+  </script>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -14,11 +23,22 @@
   <header class="bg-white shadow-md sticky top-0 z-50">
     <nav aria-label="Primary navigation" class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-col justify-center gap-2 py-3 sm:flex-row sm:justify-between sm:items-center sm:h-16 sm:gap-0 sm:py-0">
       <a href="#" class="text-xl sm:text-2xl font-bold text-indigo-600 nav-link" data-target="home">Peter Munyoka Ilunga</a>
-      <div class="primary-nav flex items-center justify-between gap-x-3 sm:block sm:space-x-6">
-        <a href="#" class="text-sm sm:text-base text-gray-600 hover:text-indigo-600 transition-colors nav-link active" data-target="home" aria-current="page">Home</a>
-        <a href="#" class="text-sm sm:text-base text-gray-600 hover:text-indigo-600 transition-colors nav-link" data-target="about">About</a>
-        <a href="#" class="text-sm sm:text-base text-gray-600 hover:text-indigo-600 transition-colors nav-link" data-target="projects">Projects</a>
-        <a href="#" class="text-sm sm:text-base text-gray-600 hover:text-indigo-600 transition-colors nav-link" data-target="contact">Contact</a>
+      <div class="theme-controls flex items-center gap-2">
+        <div class="primary-nav flex flex-1 items-center justify-between gap-x-2 sm:block sm:flex-none sm:space-x-6">
+          <a href="#" class="text-sm sm:text-base text-gray-600 hover:text-indigo-600 transition-colors nav-link active" data-target="home" aria-current="page">Home</a>
+          <a href="#" class="text-sm sm:text-base text-gray-600 hover:text-indigo-600 transition-colors nav-link" data-target="about">About</a>
+          <a href="#" class="text-sm sm:text-base text-gray-600 hover:text-indigo-600 transition-colors nav-link" data-target="projects">Projects</a>
+          <a href="#" class="text-sm sm:text-base text-gray-600 hover:text-indigo-600 transition-colors nav-link" data-target="contact">Contact</a>
+        </div>
+        <button type="button" id="theme-toggle" class="theme-toggle inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full transition-colors" aria-label="Switch to dark mode" aria-pressed="false" title="Switch to dark mode">
+          <svg class="moon-icon h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M20.9 13A9 9 0 0 1 11 3.1 9 9 0 1 0 20.9 13Z"></path>
+          </svg>
+          <svg class="sun-icon h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="4"></circle>
+            <path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"></path>
+          </svg>
+        </button>
       </div>
     </nav>
   </header>
