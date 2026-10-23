@@ -127,11 +127,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- 3. PROJECT FILTERING LOGIC ---
 
-    // Get all the filter buttons (All, Web, Design, Other)
+    // Get all the filter buttons (All, Web, Other, etc.)
     const filterButtons = document.querySelectorAll('#projects .filter-btn');
     
     // Get all the project cards
     const projectCards = document.querySelectorAll('#projects .project-card');
+
+    // Remove any category buttons that no longer have matching cards.
+    const categoriesInUse = new Set(
+        Array.from(projectCards)
+            .map(card => card.dataset.category)
+            .filter(Boolean)
+    );
+    filterButtons.forEach(button => {
+        const category = button.dataset.category;
+        if (category !== 'all' && !categoriesInUse.has(category)) {
+            button.remove();
+        }
+    });
 
     // Announce the number of visible projects to assistive technology.
     const projectResults = document.getElementById('project-results');

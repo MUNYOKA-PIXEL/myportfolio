@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Explore the portfolio of Peter Munyoka Ilunga, a Software Engineering student showcasing web projects, programming work, and his journey in technology.">
-  <title>Peter Munyoka Ilunga - Digital Portfolio</title>
+  <meta name="description" content="Peter Munyoka Ilunga is a second-year Software Engineering student at USIU-Africa building clean, responsive websites and web apps.">
+  <title>Peter Munyoka Ilunga | Web Developer Portfolio</title>
   <script>
     try {
       if (localStorage.getItem('portfolio-theme') === 'dark') {
@@ -26,6 +26,7 @@
       <div class="theme-controls flex items-center gap-2">
         <div class="primary-nav flex flex-1 items-center justify-between gap-x-2 sm:block sm:flex-none sm:space-x-6">
           <a href="#home" class="text-sm sm:text-base text-gray-600 hover:text-indigo-600 transition-colors nav-link active" data-target="home" aria-current="page">Home</a>
+          <a href="#services" class="text-sm sm:text-base text-gray-600 hover:text-indigo-600 transition-colors nav-link" data-target="services">Services</a>
           <a href="#about" class="text-sm sm:text-base text-gray-600 hover:text-indigo-600 transition-colors nav-link" data-target="about">About</a>
           <a href="#projects" class="text-sm sm:text-base text-gray-600 hover:text-indigo-600 transition-colors nav-link" data-target="projects">Projects</a>
           <a href="#contact" class="text-sm sm:text-base text-gray-600 hover:text-indigo-600 transition-colors nav-link" data-target="contact">Contact</a>
@@ -50,21 +51,27 @@
           
           <div class="md:w-1/2 text-center md:text-left">
             <h1 id="home-heading" class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 leading-tight">
-              Hi, I'm <span class="text-indigo-600">Munyoka</span>.
+              Hi, I'm <span class="text-indigo-600">Munyoka</span> 👋
             </h1>
             <p class="mt-4 text-lg sm:text-xl text-slate-600">
-              A passionate web enthusiast and creative
-              problem-solver. Welcome to my personal corner of the internet, where I
-              share my journey, my work, and my inspirations.
+              I build clean, fast websites and web apps. I'm a Software Engineering
+              student at USIU-Africa, and I like turning ideas into things people can
+              actually use.
+            </p>
+            <p class="mt-3 text-base sm:text-lg text-indigo-600 font-medium">
+              Based in Nairobi. Open to internships and freelance projects.
             </p>
 
             <div class="mt-8 flex flex-col sm:flex-row items-center gap-4 justify-center md:justify-start">
               <a href="#projects" class="inline-block bg-indigo-600 text-white font-semibold px-6 py-3 rounded-lg shadow-lg hover:bg-indigo-700 transition-all nav-link" data-target="projects">
-                View My Work
+                See my work
+              </a>
+              <a href="#contact" class="inline-block border border-indigo-600 text-indigo-600 font-semibold px-6 py-3 rounded-lg shadow-sm hover:bg-indigo-50 transition-all nav-link" data-target="contact">
+                Let's talk
               </a>
 
               <div class="flex items-center gap-4">
-                <a href="https://www.linkedin.com/in/petter-munyoka-ilunga21" target="_blank" rel="noopener noreferrer" class="text-slate-500 hover:text-[#0A66C2] transition-colors p-2" aria-label="LinkedIn">
+                <a href="https://www.linkedin.com/in/peter-munyoka-ilunga21" target="_blank" rel="noopener noreferrer" class="text-slate-500 hover:text-[#0A66C2] transition-colors p-2" aria-label="LinkedIn">
                    <svg class="h-8 w-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                       <path fill-rule="evenodd" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" clip-rule="evenodd" />
                    </svg>
@@ -89,46 +96,69 @@
       </div>
     </section>
 
+    <section id="services" class="section" aria-labelledby="services-heading">
+      <div class="container mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
+        <div class="rounded-2xl border border-indigo-100 bg-white p-8 shadow-lg sm:p-10">
+          <h2 id="services-heading" class="text-3xl sm:text-4xl font-bold text-slate-900">What I can build</h2>
+          <ul class="mt-6 space-y-4 text-lg leading-relaxed text-slate-700">
+            <li class="flex gap-3"><span class="mt-2 h-2.5 w-2.5 rounded-full bg-indigo-600 flex-shrink-0"></span><span><strong>Business websites:</strong> simple, mobile-friendly pages for shops, services and small companies.</span></li>
+            <li class="flex gap-3"><span class="mt-2 h-2.5 w-2.5 rounded-full bg-indigo-600 flex-shrink-0"></span><span><strong>Booking and inquiry pages:</strong> contact forms and buttons that make it easy for customers to reach you.</span></li>
+            <li class="flex gap-3"><span class="mt-2 h-2.5 w-2.5 rounded-full bg-indigo-600 flex-shrink-0"></span><span><strong>Web apps:</strong> dashboards, portals and database-backed tools using Supabase.</span></li>
+            <li class="flex gap-3"><span class="mt-2 h-2.5 w-2.5 rounded-full bg-indigo-600 flex-shrink-0"></span><span><strong>Small tools:</strong> calculators, reports and data tools in Python.</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
     <section id="about" class="section" aria-labelledby="about-heading">
       <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 sm:py-24">
         <h2 id="about-heading" class="text-3xl sm:text-4xl font-bold text-center text-slate-900">About Me</h2>
-        <p class="text-center text-lg text-slate-600 mt-4 max-w-3xl mx-auto">
-          This section is all about my story, what I'm
-          passionate about, and what drives me. It's a place for you to get to
-          know the person behind the projects.
+        <p class="text-center text-lg text-slate-600 mt-6 max-w-5xl mx-auto">
+          I'm a second-year Software Engineering student at USIU-Africa in Nairobi. I build web projects with HTML, CSS, JavaScript and Python (and I'm learning React and TypeScript), and I like projects where there's a real problem to solve. My biggest one so far is OmniCampus, a campus platform with logins, different user roles and an AI assistant. Outside of code, I mentor other students and tutor young learners, so I'm used to explaining things clearly and working with people.
         </p>
 
         <div class="mt-12">
           <h3 class="text-2xl font-bold text-center text-slate-900">Skills &amp; Tools</h3>
           <div class="mt-6 grid gap-6 sm:grid-cols-2">
             <section class="bg-white p-6 rounded-lg shadow-lg" aria-labelledby="programming-skills-heading">
-              <h4 id="programming-skills-heading" class="text-xl font-semibold text-indigo-600 mb-4">Programming &amp; Web</h4>
+              <h4 id="programming-skills-heading" class="text-xl font-semibold text-indigo-600 mb-4">Languages &amp; Web</h4>
               <ul class="flex flex-wrap gap-2">
                 <li class="rounded-full bg-indigo-100 px-3 py-1 text-sm font-medium text-indigo-700">Python</li>
                 <li class="rounded-full bg-indigo-100 px-3 py-1 text-sm font-medium text-indigo-700">JavaScript</li>
-                <li class="rounded-full bg-indigo-100 px-3 py-1 text-sm font-medium text-indigo-700">C++</li>
-                <li class="rounded-full bg-indigo-100 px-3 py-1 text-sm font-medium text-indigo-700">HTML5</li>
-                <li class="rounded-full bg-indigo-100 px-3 py-1 text-sm font-medium text-indigo-700">CSS3</li>
+                <li class="rounded-full bg-indigo-100 px-3 py-1 text-sm font-medium text-indigo-700">HTML</li>
+                <li class="rounded-full bg-indigo-100 px-3 py-1 text-sm font-medium text-indigo-700">CSS</li>
+                <li class="rounded-full bg-indigo-100 px-3 py-1 text-sm font-medium text-indigo-700">Responsive Design</li>
               </ul>
             </section>
 
             <section class="bg-white p-6 rounded-lg shadow-lg" aria-labelledby="database-skills-heading">
-              <h4 id="database-skills-heading" class="text-xl font-semibold text-indigo-600 mb-4">Databases &amp; APIs</h4>
+              <h4 id="database-skills-heading" class="text-xl font-semibold text-indigo-600 mb-4">Databases</h4>
               <ul class="flex flex-wrap gap-2">
                 <li class="rounded-full bg-indigo-100 px-3 py-1 text-sm font-medium text-indigo-700">PostgreSQL</li>
-                <li class="rounded-full bg-indigo-100 px-3 py-1 text-sm font-medium text-indigo-700">MySQL</li>
                 <li class="rounded-full bg-indigo-100 px-3 py-1 text-sm font-medium text-indigo-700">Supabase</li>
-                <li class="rounded-full bg-indigo-100 px-3 py-1 text-sm font-medium text-indigo-700">REST APIs</li>
               </ul>
             </section>
 
             <section class="bg-white p-6 rounded-lg shadow-lg" aria-labelledby="tools-skills-heading">
               <h4 id="tools-skills-heading" class="text-xl font-semibold text-indigo-600 mb-4">Tools</h4>
               <ul class="flex flex-wrap gap-2">
-                <li class="rounded-full bg-indigo-100 px-3 py-1 text-sm font-medium text-indigo-700">Microsoft Excel</li>
                 <li class="rounded-full bg-indigo-100 px-3 py-1 text-sm font-medium text-indigo-700">Git</li>
                 <li class="rounded-full bg-indigo-100 px-3 py-1 text-sm font-medium text-indigo-700">GitHub</li>
                 <li class="rounded-full bg-indigo-100 px-3 py-1 text-sm font-medium text-indigo-700">VS Code</li>
+                <li class="rounded-full bg-indigo-100 px-3 py-1 text-sm font-medium text-indigo-700">Microsoft Excel</li>
+              </ul>
+            </section>
+
+            <section class="bg-white p-6 rounded-lg shadow-lg" aria-labelledby="currently-learning-heading">
+              <h4 id="currently-learning-heading" class="text-xl font-semibold text-indigo-600 mb-4">Currently learning</h4>
+              <ul class="flex flex-wrap gap-2">
+                <li class="rounded-full bg-indigo-100 px-3 py-1 text-sm font-medium text-indigo-700">React</li>
+                <li class="rounded-full bg-indigo-100 px-3 py-1 text-sm font-medium text-indigo-700">TypeScript</li>
+                <li class="rounded-full bg-indigo-100 px-3 py-1 text-sm font-medium text-indigo-700">Tailwind CSS</li>
+                <li class="rounded-full bg-indigo-100 px-3 py-1 text-sm font-medium text-indigo-700">Java</li>
+                <li class="rounded-full bg-indigo-100 px-3 py-1 text-sm font-medium text-indigo-700">C++</li>
+                <li class="rounded-full bg-indigo-100 px-3 py-1 text-sm font-medium text-indigo-700">MySQL</li>
+                <li class="rounded-full bg-indigo-100 px-3 py-1 text-sm font-medium text-indigo-700">REST APIs</li>
               </ul>
             </section>
 
@@ -136,7 +166,7 @@
               <h4 id="professional-skills-heading" class="text-xl font-semibold text-indigo-600 mb-4">Professional Skills</h4>
               <ul class="flex flex-wrap gap-2">
                 <li class="rounded-full bg-indigo-100 px-3 py-1 text-sm font-medium text-indigo-700">Peer Mentorship</li>
-                <li class="rounded-full bg-indigo-100 px-3 py-1 text-sm font-medium text-indigo-700">Collaborative Learning</li>
+                <li class="rounded-full bg-indigo-100 px-3 py-1 text-sm font-medium text-indigo-700">Communication</li>
                 <li class="rounded-full bg-indigo-100 px-3 py-1 text-sm font-medium text-indigo-700">Problem Solving</li>
                 <li class="rounded-full bg-indigo-100 px-3 py-1 text-sm font-medium text-indigo-700">Team Leadership</li>
               </ul>
@@ -146,56 +176,22 @@
 
         <div class="mt-16 grid md:grid-cols-2 gap-12">
           <div class="bg-white p-8 rounded-lg shadow-lg">
-            <h3 class="text-2xl font-semibold text-indigo-600 mb-4">My Story: From Curiosity to Code</h3>
+            <h3 class="text-2xl font-semibold text-indigo-600 mb-4">My Story</h3>
             <p class="text-slate-600 leading-relaxed">
-              My journey into technology began not in a
-              big tech hub, but in the heart of Zambia. Growing up, my first spark of
-              curiosity came in junior secondary school: I couldn't stop wondering how
-              everything I saw on a computer actually worked.
-              <br><br>
-              That curiosity quickly evolved into a
-              focused passion. Watching my uncle—a Computer Science graduate—code and
-              solve real-world problems using C++ became my biggest inspiration. It
-              showed me that programming was more than just syntax; it was a powerful
-              tool for creation.
-              <br><br>
-              Today, I’m pursuing my Bachelor's in
-              Software Engineering at United States International University – Africa
-              (USIU-A). My technical foundation is strong, covering essential web
-              languages like JavaScript, HTML, and CSS, as well as Python and C++.
-              I've built this knowledge through a blend of formal courses, self-study,
-              and mentorship.
-              <br><br>
-              I don't just write code; I aim to find
-              innovative solutions that make a difference. My projects reflect this
-              drive: I've successfully developed and launched a website for my fashion
-              design business and created a practical tax calculation program to
-              simplify financial planning for users. While coding is often
-              challenging, I approach every obstacle with patience, positivity, and
-              persistence, which continually sharpens my problem-solving skills.
+              It started in Zambia, back in junior secondary school, when I couldn't stop wondering
+              how everything on a computer actually worked. Then I watched my uncle, a Computer
+              Science graduate, solve real problems with C++, and it clicked: code is a way to build
+              things that help people. Since then I've learned through my degree, self-study and
+              mentorship, and I try to approach every bug with patience (and a bit of stubbornness).
             </p>
           </div>
 
           <div class="bg-white p-8 rounded-lg shadow-lg">
-            <h3 class="text-2xl font-semibold text-indigo-600 mb-4">Likes & Inspirations</h3>
+            <h3 class="text-2xl font-semibold text-indigo-600 mb-4">Likes &amp; Inspirations</h3>
             <p class="text-slate-600 leading-relaxed">
-              I'm fundamentally inspired by the
-              relentless pace of technological evolution and its constant demand for
-              critical and creative thinking. I truly believe software development is
-              less about writing code and more about finding innovative solutions that
-              genuinely make a difference in people's lives. My ultimate professional
-              ambition is to channel this innovation to transform Zambia’s
-              technological landscape and become one of the most dedicated and
-              creative software developers of my generation.
+              I'm drawn to how fast tech keeps changing, and to the problem-solving it demands. I think software is less about writing code and more about finding good answers to real problems. Long term, I want to use these skills to help grow Zambia's tech scene.
               <br><br>
-              When I'm Not Coding
-              <br>
-              Active Pursuits: I love to go swimming—it's a great way to clear my head and recharge.
-              <br>
-              Connecting: I prioritize spending time with family and unwinding by watching movies.
-              <br>
-              Solving Problems: I enjoy tackling puzzles
-              and giving advice to others, finding clarity in complex situations.
+              Away from the keyboard: I swim to clear my head, watch movies and spend time with family, and I'll happily take on a puzzle or help someone think a problem through.
             </p>
           </div>
         </div>
@@ -214,11 +210,10 @@
         <div role="group" aria-label="Filter projects by category" class="flex flex-wrap justify-center gap-2 sm:gap-4 my-8">
           <button type="button" class="filter-btn active font-semibold px-4 py-2 rounded-full transition-all" data-category="all" aria-pressed="true" aria-controls="project-grid">All</button>
           <button type="button" class="filter-btn font-semibold px-4 py-2 rounded-full transition-all" data-category="web" aria-pressed="false" aria-controls="project-grid">Web Development</button>
-          <button type="button" class="filter-btn font-semibold px-4 py-2 rounded-full transition-all" data-category="design" aria-pressed="false" aria-controls="project-grid">Design</button>
           <button type="button" class="filter-btn font-semibold px-4 py-2 rounded-full transition-all" data-category="other" aria-pressed="false" aria-controls="project-grid">Other</button>
         </div>
 
-        <p id="project-results" class="sr-only" role="status" aria-live="polite" aria-atomic="true">Showing 5 projects.</p>
+        <p id="project-results" class="sr-only" role="status" aria-live="polite" aria-atomic="true">Showing 4 projects.</p>
         <div id="project-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
           <article class="project-card bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-300" data-category="web">
             <div class="h-48 bg-indigo-100 flex items-center justify-center text-indigo-700 font-bold text-lg border-b-4 border-indigo-500">
@@ -227,9 +222,9 @@
             <div class="p-6">
               <h3 class="text-xl font-semibold text-slate-900">OmniCampus</h3>
               <p class="text-slate-600 mt-2">
-                A campus platform bringing together student services such as library borrowing, clubs, medical services, and lost and found.
+                One app for everyday campus life: borrow library books, join clubs and events, book medical appointments and report lost items. It has an AI assistant for quick questions, and different roles (students and four types of admin) each see only what they should, enforced at the database level.
               </p>
-              <p class="text-sm text-slate-500 mt-3"><strong>Built with:</strong> React, TypeScript, Supabase</p>
+              <p class="text-sm text-slate-500 mt-3"><strong>Built with:</strong> React, TypeScript, Supabase, Gemini</p>
               <div class="flex flex-wrap gap-4 mt-4">
                 <a href="https://omnicampus-campus.vercel.app" target="_blank" rel="noopener noreferrer" class="font-semibold text-indigo-600 hover:text-indigo-800 underline underline-offset-4">Live demo</a>
                 <a href="https://github.com/MUNYOKA-PIXEL/Omnicampus_Project" target="_blank" rel="noopener noreferrer" class="font-semibold text-indigo-600 hover:text-indigo-800 underline underline-offset-4">Source code</a>
@@ -244,9 +239,9 @@
             <div class="p-6">
               <h3 class="text-xl font-semibold text-slate-900">Veterinary Clinical Decision Support System</h3>
               <p class="text-slate-600 mt-2">
-                An interactive machine-learning application that estimates disease predictions for cattle, sheep, and goats from clinical symptoms and vital signs.
+                A machine-learning tool that helps vets and livestock officers predict diseases in cattle, sheep and goats from symptoms and vitals. Trained on 32,540 records, it reaches 87.3% accuracy, close to the best the data allows, and it shows how confident it is in each prediction so a person can double-check.
               </p>
-              <p class="text-sm text-slate-500 mt-3"><strong>Built with:</strong> Python, Streamlit, scikit-learn</p>
+              <p class="text-sm text-slate-500 mt-3"><strong>Built with:</strong> Python, scikit-learn, Streamlit</p>
               <div class="flex flex-wrap gap-4 mt-4">
                 <a href="https://github.com/MUNYOKA-PIXEL/VCDSS-AI" target="_blank" rel="noopener noreferrer" class="font-semibold text-indigo-600 hover:text-indigo-800 underline underline-offset-4">Source code</a>
               </div>
@@ -258,9 +253,9 @@
               &gt;_ payroll report
             </div>
             <div class="p-6">
-              <h3 class="text-xl font-semibold text-slate-900">Payroll System Calculation</h3>
+              <h3 class="text-xl font-semibold text-slate-900">Payroll System</h3>
               <p class="text-slate-600 mt-2">
-                A Python command-line program that calculates payroll deductions and net salary, then generates a detailed report.
+                A Python command-line program that works out gross pay, tax deductions and net salary, then prints a clear report. It checks inputs along the way so bad data doesn't slip through.
               </p>
               <p class="text-sm text-slate-500 mt-3"><strong>Built with:</strong> Python</p>
               <div class="flex flex-wrap gap-4 mt-4">
@@ -271,31 +266,18 @@
 
           <article class="project-card bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-300" data-category="web">
             <div class="h-48 bg-sky-100 flex items-center justify-center text-sky-700 font-bold text-lg border-b-4 border-indigo-500">
-              Peter Munyoka Ilunga
+              Personal Portfolio
             </div>
             <div class="p-6">
               <h3 class="text-xl font-semibold text-slate-900">Personal Portfolio</h3>
               <p class="text-slate-600 mt-2">
-                A responsive portfolio website presenting my background, projects, and contact information.
+                This site! A responsive portfolio showing my background, projects and how to reach me.
               </p>
               <p class="text-sm text-slate-500 mt-3"><strong>Built with:</strong> HTML, Tailwind CSS, JavaScript</p>
               <div class="flex flex-wrap gap-4 mt-4">
                 <a href="https://munyoka-pixel.github.io/myportfolio" target="_blank" rel="noopener noreferrer" class="font-semibold text-indigo-600 hover:text-indigo-800 underline underline-offset-4">Live site</a>
                 <a href="https://github.com/MUNYOKA-PIXEL/myportfolio" target="_blank" rel="noopener noreferrer" class="font-semibold text-indigo-600 hover:text-indigo-800 underline underline-offset-4">Source code</a>
               </div>
-            </div>
-          </article>
-
-          <article class="project-card bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-300" data-category="design">
-            <div class="h-48 bg-rose-100 flex items-center justify-center text-rose-700 font-bold text-lg border-b-4 border-rose-500">
-              Fashion Design
-            </div>
-            <div class="p-6">
-              <h3 class="text-xl font-semibold text-slate-900">Fashion Business Website</h3>
-              <p class="text-slate-600 mt-2">
-                A website for my fashion design business. A portfolio preview is coming soon.
-              </p>
-              <p class="text-sm text-slate-500 mt-3"><strong>Status:</strong> Coming soon</p>
             </div>
           </article>
 
@@ -307,8 +289,10 @@
       <div class="container mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-20 sm:py-24">
         <h2 id="contact-heading" class="text-3xl sm:text-4xl font-bold text-center text-slate-900">Get In Touch</h2>
         <p class="text-center text-lg text-slate-600 mt-4">
-          In case you have a question, an opportunity, or
-          just want to say hi? Feel free to reach out. I'd love to hear from you!
+          Let's work together.
+        </p>
+        <p class="text-center text-lg text-slate-600 mt-2">
+          Got a website or app in mind, a question, or just want to say hi? Send me a message and I'll get back to you soon.
         </p>
 
         <form id="contact-form" method="POST" action="https://getform.io/f/axozeleb" class="bg-white p-8 sm:p-10 rounded-lg shadow-lg mt-12 space-y-6">
@@ -339,7 +323,7 @@
     <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8 flex flex-col items-center">
       
       <div class="flex space-x-6 mb-4">
-        <a href="https://www.linkedin.com/in/petter-munyoka-ilunga21" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-white transition-colors" aria-label="LinkedIn">
+        <a href="https://www.linkedin.com/in/peter-munyoka-ilunga21" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-white transition-colors" aria-label="LinkedIn">
           <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
             <path fill-rule="evenodd" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" clip-rule="evenodd" />
           </svg>
@@ -351,8 +335,7 @@
         </a>
       </div>
 
-      <p>&copy; 2025 PETER MUNYOKA ILUNGA. All rights reserved.</p>
-      <p class="text-sm text-slate-400 mt-1">Built with HTML, CSS, and JavaScript.</p>
+      <p>&copy; 2026 Peter Munyoka Ilunga. Built with HTML, Tailwind CSS and JavaScript.</p>
     </div>
   </footer>
 
