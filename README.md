@@ -1,12 +1,12 @@
-# Peter Munyoka Ilunga | Digital Portfolio
+# Peter Munyoka Ilunga | Web Developer Portfolio
 
-A responsive personal portfolio showcasing my background, skills, projects, and contact information.
+A responsive personal portfolio for a second-year Software Engineering student at USIU-Africa, showcasing web development work, project experience, skills, and contact information.
 
 **Live site:** [munyoka-pixel.github.io/myportfolio](https://munyoka-pixel.github.io/myportfolio/)
 
 ## Features
 
-- Home, About, Projects, and Contact sections with shareable links
+- Home, Services, About, Projects, and Contact sections with shareable links
 - Browser Back and Forward support for section navigation
 - Light and dark themes, with the selected theme saved in the browser
 - Project gallery with category filters
@@ -18,9 +18,8 @@ A responsive personal portfolio showcasing my background, skills, projects, and 
 
 - [OmniCampus](https://github.com/MUNYOKA-PIXEL/Omnicampus_Project)
 - [Veterinary Clinical Decision Support System](https://github.com/MUNYOKA-PIXEL/VCDSS-AI)
-- [Payroll System Calculation](https://github.com/MUNYOKA-PIXEL/Payroll-System-Calculation)
+- [Payroll System](https://github.com/MUNYOKA-PIXEL/Payroll-System-Calculation)
 - [Personal Portfolio](https://github.com/MUNYOKA-PIXEL/myportfolio)
-- Fashion Business Website (coming soon)
 
 ## Built with
 
